@@ -1,0 +1,13 @@
+<h2>Login</h2>
+
+<%= form_tag do %>
+	<p><%= flash[:errors] if flash[:errors] %></p>
+
+	<%= label_tag :username %>
+	<%= text_field_tag :username %>
+
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+
+	<%= submit_tag :login %>
+<% end %>

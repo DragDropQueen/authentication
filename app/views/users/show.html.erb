@@ -1,1 +1,5 @@
 <h1>Welcome, <%= @user.first_name %></h1>
+<p><%= flash[:notice] if flash[:notice] %></p>
+
+<p>Your <b>session[:user_id]</b> is: <%= session[:user_id] %>.</p>
+<%= link_to "Logout", logout_path, method: :delete %>
